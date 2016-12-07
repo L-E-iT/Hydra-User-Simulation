@@ -9,7 +9,7 @@ target_time = sim_time + cur_time
 # <== Fill password list with passwords file ==>
 
 passwords = []
-pwfile_choice = raw_input('Please specify a password list file or leave black to use the default: ')
+pwfile_choice = raw_input('Please specify a password list file or leave blank to use the default: ')
 if pwfile_choice == '':
     pwfile_choice = '500-worst-passwords.txt'
 
@@ -22,7 +22,7 @@ with open(pwfile_choice) as pwfile:
 # <== Fill user list with user file or preconfigured users ==>
 
 users = []
-usrfile_choice = raw_input('Please specify a user list file or leave black to use the default list: ')
+usrfile_choice = raw_input('Please specify a user list file or leave blank to use the default list: ')
 if usrfile_choice == '':
     users = ['root','mysql','admin','administrator','user','postrges','oracle','guest','test']
 else:
